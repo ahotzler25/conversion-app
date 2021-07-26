@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Button, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Button, Text, TextInput, View } from 'react-native';
+import styles from '../styles.js';
 
 // cels = (fahr - 32.0) * 5.0/9.0; Fahr to cels
 // fahr = (cels * 9.0/5.0) + 32.0; Cels to fahr  
@@ -37,7 +38,7 @@ export default function Temperatures() {
     return (
 
         <View>
-            <Text>{ (isFahrPrimary) ? 'Convert Celsius to Fahrenheit' : 'Convert Fahrenheit to Celsius' }</Text>
+            <Text style={styles.fonts}>{ (isFahrPrimary) ? 'Convert Celsius to Fahrenheit' : 'Convert Fahrenheit to Celsius' }</Text>
             
             {/* Does type='submit' matter? SHould it be 'type='button'? */}
             <TextInput type='submit' placeholder={(isFahrPrimary) ? 'Enter Celsius Number Here' : 'Enter Fahrenheit Number Here'} keyboardType='numeric' 
@@ -49,4 +50,10 @@ export default function Temperatures() {
             <Button title='Swap Conversions'  onPress={ switchPrimary }></Button>
         </View>
     )
-}
+};
+
+// const styles = StyleSheet.create({
+//     fonts: {
+//         fontSize: 20
+//     }
+// })

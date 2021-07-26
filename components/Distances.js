@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, TextInput, Text, View } from 'react-native';
+import styles from '../styles.js';
 
 export default function Distances() {
     const [ miles, setMiles ] = useState(0);
@@ -32,8 +33,8 @@ export default function Distances() {
 
     return (
         <View>
-            
-            <Text>{ (isMilesPrimary) ? 'Convert Kilometers to Miles' : 'Convert Miles to Kilometers' }</Text>
+            <Text></Text>
+            <Text style={styles.fonts}>{ (isMilesPrimary) ? 'Convert Kilometers to Miles' : 'Convert Miles to Kilometers' }</Text>
             <TextInput type='submit' placeholder={(isMilesPrimary) ? 'Enter Kilometer Number Here' : 'Enter Miles Number Here'} keyboardType='numeric'
                 onChangeText={(text) => convertDistances(text)}>
             </TextInput>

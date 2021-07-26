@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Text, View } from 'react-native';
+import styles from '../styles.js';
 
 export default function Time() {
     const [ mnTime, setMnTime ] = useState(0);
@@ -14,6 +16,8 @@ export default function Time() {
 
     return (
         <View>
+            <Text></Text>
+            <Text style={styles.fonts}>Alle Zeit ist Relativ</Text>
             <Text>Minnesota Time: {mnTime} </Text>
             <Text>German Time: {germanTime} </Text>
         </View>
