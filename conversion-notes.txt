@@ -1,0 +1,21 @@
+/*
+  What I wrote down as useful conversions is:
+  miles/km(/m)
+  [yards/m]
+  feet/m
+  inches/cm
+
+  F/C
+
+  lbs/kg(/g)
+  oz/l or ml
+
+  square feet/m²
+  gallons <> liters
+  pints <> l (US pints and imperial pints)
+
+    FUNNY:
+    1 mile = 1 minute Minnesota Time
+    1km = 10 minutes (German walk)
+
+*/
