@@ -26,10 +26,10 @@ export default function Temperatures() {
 
         if (isFahrPrimary) {
             setFahrTemp(Math.round(((inputToNum * 9.0/5.0) + 32) * 100) / 100);
-            setCelsiusTemp(Math.round(inputToNum * 100) / 100);
+            setCelsiusTemp(inputToNum);
         } else {
             setCelsiusTemp(Math.round(((inputToNum - 32) * 5/9) * 100 ) / 100);
-            setFahrTemp(Math.round(inputToNum * 100) / 100);
+            setFahrTemp(inputToNum);
         };
     };
 
@@ -40,7 +40,7 @@ export default function Temperatures() {
             <Text>{ (isFahrPrimary) ? 'Convert Celsius to Fahrenheit' : 'Convert Fahrenheit to Celsius' }</Text>
             
             {/* Does type='submit' matter? SHould it be 'type='button'? */}
-            <TextInput type='submit' placeholder='Enter Number Here' keyboardType='numeric' 
+            <TextInput type='submit' placeholder={(isFahrPrimary) ? 'Enter Celsius Number Here' : 'Enter Fahrenheit Number Here'} keyboardType='numeric' 
                 onChangeText={(text) => convertTemps(text)}>
             </TextInput>
 

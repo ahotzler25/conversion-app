@@ -3,6 +3,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, SafeAreaView, Text, View, AppRegistry, ScrollView } from 'react-native';
 import { NativeRouter, Route, Link } from 'react-router-native';
+import { StatusBar } from 'expo-status-bar';
 import Temperatures from './components/Temperatures';
 import Home from './components/Home';
 import Time from './components/Time';
@@ -34,6 +35,7 @@ export default function App() {
          */}
 
         {/* <Home /> */}
+        <StatusBar style="auto" />
         <Temperatures />
         <Distances />
         <Measurements />
@@ -47,6 +49,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: 100,
     // alignItems: 'center',
     // justifyContent: 'center',
   },

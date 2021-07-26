@@ -22,9 +22,11 @@ export default function Distances() {
         const inputToNum = Number(text);
 
         if (isMilesPrimary) {
-            // setMiles(Math.round(()))
+            setMiles(Math.round(inputToNum * 0.621371));
+            setKilometers(inputToNum);
         } else {
-
+            setKilometers(Math.round(inputToNum * 1.609344));
+            setMiles(inputToNum);
         }
     }
 
@@ -32,7 +34,7 @@ export default function Distances() {
         <View>
             
             <Text>{ (isMilesPrimary) ? 'Convert Kilometers to Miles' : 'Convert Miles to Kilometers' }</Text>
-            <TextInput type='submit' placeholder='Enter Number Here' keyboardType='numeric'
+            <TextInput type='submit' placeholder={(isMilesPrimary) ? 'Enter Kilometer Number Here' : 'Enter Miles Number Here'} keyboardType='numeric'
                 onChangeText={(text) => convertDistances(text)}>
             </TextInput>
             <Text>Miles: { miles }</Text>
